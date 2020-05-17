@@ -227,11 +227,11 @@ Tue
   
   * The Serial Monitor should output the current date-time set on the Mayfly.  If you are unsatisfied with the results or you missed the reference time, change the "target time" (`DateTime dt()`) in the code, upload the sketch to the Mayfly and try again.  
   
-At this point, the RTC is set but if you were to turn the Mayfly off and back on or press the `Reset` button a second time, the time would revert to the time we set in `DateTime dt()`. We want to change that line of code so that the time is NOT SET AGAIN in the `setup()` function.  
+At this point, the RTC is set but if you were to turn the Mayfly off and back on or press the `Reset` button a second time, the time would revert to the time we set in `rtc.SetDateTime(dt)`. We want to change that line of code so that the time is NOT SET AGAIN in the `setup()` function.  
   
-Close the Serial Monitor and return the the line where we set the date-time (`DateTime dt();`).  Use two slashes in front of the line of code so it looks like the following:  
+Close the Serial Monitor and return to the line where we set the date-time (`rtc.setDateTime(dt); `).  Use two slashes in front of the line of code so it looks like the following:  
   
-`// DateTime dt(2011, 11, 10, 15, 18, 0, 5);`    
+`//    rtc.setDateTime(dt); //Adjust date-time as defined 'dt' above`    
 
   * Compile and upload again by clicking the `Upload` button, hold `Crtl+U` or select `Sketch > Upload` from then menu.   
   * Open the Serial Monitor by pressing the `Serial Monitor` button, hold `Ctrl+Shift+M` or select `Tools > Serial Monitor` from the menu.  Make sure the "`baud`" rate option at the bottom right side of the window is set to "`57600`".  

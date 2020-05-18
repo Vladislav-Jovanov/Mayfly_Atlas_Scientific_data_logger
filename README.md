@@ -311,10 +311,10 @@ Open the file (`Mayfly_ContinuousTemperatureLogger.ino`) in the Arduino IDE and 
   
 ```
 // Data Header
-#define   DATA_HEADER Sampling Feature UUID: v[sampling feature UUID],,,\r\nSensor Name:,Maxim_DS18B20,EnviroDIY_Mayfly Data Logger,EnviroDIY_Mayfly Data Logger\r\nVariable Name:,Temperature_C,Battery_Voltage,Board_Temp_C\r\nResult Unit:,degreeCelsius,volt,degreeCelsius\r\nResult UUID:,[variable 1 UUID],[variable 1 UUID],[variable 1 UUID]\r\nDate and Time in UTC-5,Temperature,Battery voltage,Temperature
+#define   DATA_HEADER Sampling Feature UUID: [sampling feature UUID],,,\r\nSensor Name:,Maxim_DS18B20,EnviroDIY_Mayfly Data Logger,EnviroDIY_Mayfly Data Logger\r\nVariable Name:,Temperature_C,Battery_Voltage,Board_Temp_C\r\nResult Unit:,degreeCelsius,volt,degreeCelsius\r\nResult UUID:,[variable 1 UUID],[variable 1 UUID],[variable 1 UUID]\r\nDate and Time in UTC-5,Temperature,Battery voltage,Temperature
 ```  
 
-This is the header information for the values that will be written to the SD card.  For now, we will keep it as it is, but you will need to change the UUID codes in the braces `[ ]` when [adding your sensors](https://wikiwatershed.org/help/sensor-help/sharing-sensor-data/#sensor-data) to MonitorMyWatershed. 
+This is the header information for the values that will be written to the SD card.  For now, we will keep it as it is, but you will need to change the UUID codes in (and including) the braces `[ ]` when [adding your sensors](https://wikiwatershed.org/help/sensor-help/sharing-sensor-data/#sensor-data) to MonitorMyWatershed. 
  
 If you do not plan to upload your data to MonitorMyWatershed.org, you can leave these values as they are, but the must stay in this order unless you make further changes to the sketch.    
 
@@ -472,10 +472,10 @@ In the code for the Continuous Data Logger, find the following line:
   
 ```
 // Data Header
-#define   DATA_HEADER Sampling Feature UUID: v[sampling feature UUID],,,\r\nSensor Name:,Maxim_DS18B20,EnviroDIY_Mayfly Data Logger,EnviroDIY_Mayfly Data Logger\r\nVariable Name:,Temperature_C,Battery_Voltage,Board_Temp_C\r\nResult Unit:,degreeCelsius,volt,degreeCelsius\r\nResult UUID:,[variable 1 UUID],[variable 1 UUID],[variable 1 UUID]\r\nDate and Time in UTC-5,Temperature,Battery voltage,Temperature
+#define   DATA_HEADER Sampling Feature UUID: [sampling feature UUID],,,\r\nSensor Name:,Maxim_DS18B20,EnviroDIY_Mayfly Data Logger,EnviroDIY_Mayfly Data Logger\r\nVariable Name:,Temperature_C,Battery_Voltage,Board_Temp_C\r\nResult Unit:,degreeCelsius,volt,degreeCelsius\r\nResult UUID:,[variable 1 UUID],[variable 1 UUID],[variable 1 UUID]\r\nDate and Time in UTC-5,Temperature,Battery voltage,Temperature
 ```   
   
-This data header provides you with a template for formatting your data to be usable with MonitorMyWatershed.  You will need to replace the entries between the braces `[ ]` with the values that your are given with your sensor setup.  
+This data header provides you with a template for formatting your data to be usable with MonitorMyWatershed.  You will need to replace the entries between (and including) the braces `[ ]` with the values that your are given with your sensor setup.  
   
 Go to your site on MonitorMyWatershed.org. At the top, next to the map, you will find the `Sampling Feature UUID`. Paste this code into your data header.  
   

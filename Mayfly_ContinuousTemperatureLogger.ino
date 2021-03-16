@@ -179,7 +179,7 @@ void systemSleep()
   
   // Wait until the serial ports have finished transmitting
   Serial.flush();
-  Serial1.flush();
+  // Serial1.flush();
   
   // The next timed interrupt will not be sent until this is cleared
   rtc.clearINTStatus();

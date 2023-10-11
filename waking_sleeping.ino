@@ -40,7 +40,7 @@ char const * filename = "logfile.csv"; // The data log file
 
 RTCTimer  timer;
 
-//sensors oder by addresses
+//declare Atlas Scientific sensors here
 Ezo_board ORP=Ezo_board(98, "ORP");
 Ezo_board RTD=Ezo_board(102, "RTD");
 
@@ -352,7 +352,8 @@ String createDataRecord()
   String data = getDateTime();
   data += ",";
 
-  // Temperature Sensor ----------------------------------------
+  // read all Atlas Scientific sensors here
+  //----------------------------------------
   readSensor(&ORP, data);
   readSensor(&RTD, data);
 

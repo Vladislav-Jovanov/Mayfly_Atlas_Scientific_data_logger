@@ -21,7 +21,6 @@
 #include  <Sodaq_DS3231.h> // library for the DS3231 RTC
 #include  <Sodaq_PcInt.h> // library to handle Pin Change Interrupts
 #include <Ezo_i2c.h> //include the EZO I2C library from https://github.com/Atlas-Scientific/Ezo_I2c_lib
-#include <Ezo_i2c_util.h> //brings in common print statements
 
 
 #define   RTC_PIN A7 // RTC Interrupt pin
